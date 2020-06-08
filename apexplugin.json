@@ -2,6 +2,12 @@
     "name":"FOS - Client-side Condition"
    ,"version":"20.1.0"
    ,"description":"Specify a client-side condition to control whether the execution of actions continues or stops. If the condition evaluates to True, then the rest of True or False actions are executed, if the condition evaluates to False, the execution stops."
+   ,"keywords":[
+        "clientside"
+       ,"condition"
+       ,"branch"
+       ,"dynamic action"
+    ]
    ,"license":"MIT"
    ,"homepage":"https:\/\/foex.at\/fos"
    ,"author":{
@@ -12,7 +18,7 @@
     }
    ,"repository":{
         "type":"git"
-       ,"url":"https:\/\/github.com\/foex-open-source\/.git"
+       ,"url":"https:\/\/github.com\/foex-open-source\/fos-clientside-condition.git"
     }
    ,"oracle":{
         "versions":[
@@ -30,7 +36,7 @@
            ,"plugin":{
                 "internalName":"COM.FOS.CLIENTSIDE_CONDITION"
                ,"type":"dynamic action"
-               ,"demo":"https:\/\/fos.world\/ords\/f?p=1000:"
+               ,"demo":"https:\/\/fos.world\/ords\/f?p=1000:1010"
                ,"previewImage":"https:\/\/fos.world\/ords\/fos_master_ws\/fos-image\/COM.FOS.CLIENTSIDE_CONDITION"
             }
         }
