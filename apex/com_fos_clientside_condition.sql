@@ -1,5 +1,3 @@
-
-
 prompt --application/set_environment
 set define off verify off feedback off
 whenever sqlerror exit sql.sqlcode rollback
@@ -36,13 +34,14 @@ prompt APPLICATION 102 - FOS Dev - Plugin Master
 --   Manifest
 --     PLUGIN: 61118001090994374
 --     PLUGIN: 134108205512926532
+--     PLUGIN: 547902228942303344
 --     PLUGIN: 168413046168897010
 --     PLUGIN: 13235263798301758
 --     PLUGIN: 37441962356114799
 --     PLUGIN: 1846579882179407086
 --     PLUGIN: 8354320589762683
 --     PLUGIN: 50031193176975232
---     PLUGIN: 34175298479606152
+--     PLUGIN: 106296184223956059
 --     PLUGIN: 35822631205839510
 --     PLUGIN: 2674568769566617
 --     PLUGIN: 14934236679644451
@@ -50,6 +49,7 @@ prompt APPLICATION 102 - FOS Dev - Plugin Master
 --     PLUGIN: 2657630155025963
 --     PLUGIN: 284978227819945411
 --     PLUGIN: 56714461465893111
+--     PLUGIN: 98648032013264649
 --   Manifest End
 --   Version:         19.2.0.00.18
 --   Instance ID:     250144500186934
@@ -168,13 +168,11 @@ wwv_flow_api.create_plugin(
 ,p_substitute_attributes=>false
 ,p_subscribe_plugin_settings=>true
 ,p_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'<p>The <strong>FOS - Client-side Condition</strong> dynamic action plug-in is the perfect solution for adding if/then/else conditions to determine whether the following actions within the dynamic action should be continued.',
-'</p>',
-'<p>This plug-in gives you the ability to specify a client-side condition to control whether the execution of dynamic actions continues or stops. If the condition evaluates to TRUE, then the rest of actions are executed, if the condition evaluates to '
-||'FALSE, the execution stops and an optional "ELSE" custom event can be triggered.',
-'</p>',
+'<p>The <strong>FOS - Client-side Condition</strong> dynamic action plug-in is the ideal solution for adding if/then/else conditions to determine whether the following actions within the dynamic action should be continued.<p>',
+'This plug-in gives you the ability to specify a client-side condition to control whether the execution of dynamic actions continues or stops. If the condition evaluates to TRUE, then the rest of actions are executed, if the condition evaluates to FAL'
+||'SE, the execution stops and an optional "ELSE" custom event can be triggered.</p>',
 '<p>If you require more branching logic than what this action provides we suggest you look at the "FOS - Trigger Event(s)" action which has a similar but more extended behaviour than this plug-in.</p>'))
-,p_version_identifier=>'20.1.1'
+,p_version_identifier=>'20.2.0'
 ,p_about_url=>'https://fos.world'
 ,p_plugin_comment=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '@fos-auto-return-to-page',
@@ -538,7 +536,5 @@ end;
 /
 set verify on feedback on define on
 prompt  ...done
-
-
 
 

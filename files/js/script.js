@@ -1,5 +1,3 @@
-
-
 /* globals apex */
 
 var FOS = window.FOS || {};
@@ -78,7 +76,5 @@ FOS.utils.clientsideCondition = function (daContext, config) {
 		}
 	}
 };
-
-
 
 

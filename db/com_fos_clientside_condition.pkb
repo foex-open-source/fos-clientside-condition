@@ -1,5 +1,3 @@
-
-
 create or replace package body com_fos_clientside_condition
 as
 
@@ -98,7 +96,5 @@ end render;
 
 end;
 /
-
-
 
 
