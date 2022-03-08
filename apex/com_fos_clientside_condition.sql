@@ -36,10 +36,12 @@ prompt APPLICATION 102 - FOS Dev - Plugin Master
 --     PLUGIN: 134108205512926532
 --     PLUGIN: 1039471776506160903
 --     PLUGIN: 547902228942303344
+--     PLUGIN: 217651153971039957
 --     PLUGIN: 412155278231616931
---     PLUGIN: 1200087692794692554
+--     PLUGIN: 1389837954374630576
 --     PLUGIN: 461352325906078083
 --     PLUGIN: 13235263798301758
+--     PLUGIN: 216426771609128043
 --     PLUGIN: 37441962356114799
 --     PLUGIN: 1846579882179407086
 --     PLUGIN: 8354320589762683
@@ -47,6 +49,7 @@ prompt APPLICATION 102 - FOS Dev - Plugin Master
 --     PLUGIN: 106296184223956059
 --     PLUGIN: 35822631205839510
 --     PLUGIN: 2674568769566617
+--     PLUGIN: 183507938916453268
 --     PLUGIN: 14934236679644451
 --     PLUGIN: 2600618193722136
 --     PLUGIN: 2657630155025963
@@ -55,6 +58,7 @@ prompt APPLICATION 102 - FOS Dev - Plugin Master
 --     PLUGIN: 98648032013264649
 --     PLUGIN: 455014954654760331
 --     PLUGIN: 98504124924145200
+--     PLUGIN: 212503470416800524
 --   Manifest End
 --   Version:         19.2.0.00.18
 --   Instance ID:     250144500186934
@@ -107,7 +111,7 @@ wwv_flow_api.create_plugin(
 '    l_else_event_name       p_dynamic_action.attribute_06%type := case when not l_client_substitutions then p_dynamic_action.attribute_06 else apex_plugin_util.replace_substitutions(p_dynamic_action.attribute_06) end;',
 'begin',
 '    -- standard debugging intro, but only if necessary',
-'    if apex_application.g_debug ',
+'    if apex_application.g_debug and substr(:DEBUG,6) >= 6',
 '    then',
 '        apex_plugin_util.debug_dynamic_action',
 '          ( p_plugin         => p_plugin',
@@ -177,7 +181,7 @@ wwv_flow_api.create_plugin(
 'This plug-in gives you the ability to specify a client-side condition to control whether the execution of dynamic actions continues or stops. If the condition evaluates to TRUE, then the rest of actions are executed, if the condition evaluates to FAL'
 ||'SE, the execution stops and an optional "ELSE" custom event can be triggered.</p>',
 '<p>If you require more branching logic than what this action provides we suggest you look at the "FOS - Trigger Event(s)" action which has a similar but more extended behaviour than this plug-in.</p>'))
-,p_version_identifier=>'21.1.0'
+,p_version_identifier=>'21.2.0'
 ,p_about_url=>'https://fos.world'
 ,p_plugin_comment=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '@fos-auto-return-to-page',
@@ -497,13 +501,13 @@ wwv_flow_api.create_plugin_file(
 ,p_file_name=>'js/script.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
+
 ,p_file_content=>wwv_flow_api.varchar2_to_blob(wwv_flow_api.g_varchar2_table)
 );
 end;
 /
 begin
 wwv_flow_api.g_varchar2_table := wwv_flow_api.empty_varchar2_table;
-
 wwv_flow_api.g_varchar2_table(1) := '7B2276657273696F6E223A332C22736F7572636573223A5B227363726970742E6A73225D2C226E616D6573223A5B22464F53222C2277696E646F77222C227574696C73222C22636C69656E7473696465436F6E646974696F6E222C226461436F6E746578';
 wwv_flow_api.g_varchar2_table(2) := '74222C22636F6E666967222C2261706578222C226465627567222C22696E666F222C226974656D222C2276616C7565222C22636F6E74696E7565457865637574696F6E222C22656C73654576656E744E616D65222C22696E636C75646573222C22747970';
 wwv_flow_api.g_varchar2_table(3) := '65222C2270616765222C2276616C6964617465222C2269734368616E676564222C22636F6E646974696F6E46756E6374696F6E222C2263616C6C222C22737562737469747574696F6E73222C227574696C222C226170706C7954656D706C617465222C22';

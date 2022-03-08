@@ -1,6 +1,6 @@
 {
     "name":"FOS - Client-side Condition"
-   ,"version":"21.1.0"
+   ,"version":"21.2.0"
    ,"description":"Controls the further execution of Dynamic Actions via a client-side condition.\r\n\u003Ch4\u003EFree Plug-in under MIT License\u003C\/h4\u003E\r\n\u003Cp\u003E\r\nAll FOS plug-ins are released under MIT License, which essentially means it is free for everyone to use, no matter if commercial or private use. \r\n\u003C\/p\u003E\r\n\u003Ch4\u003EOverview\u003C\/h4\u003E\r\n\u003Cp\u003EThe \u003Cstrong\u003EFOS - Client-side Condition\u003C\/strong\u003E dynamic action plug-in is the ideal solution for adding if\/then\/else conditions to determine whether the following actions within the dynamic action should be continued.\u003Cp\u003E\r\nThis plug-in gives you the ability to specify a client-side condition to control whether the execution of dynamic actions continues or stops. If the condition evaluates to TRUE, then the rest of actions are executed, if the condition evaluates to FALSE, the execution stops and an optional \"ELSE\" custom event can be triggered.\u003C\/p\u003E\r\n\u003Cp\u003EIf you require more branching logic than what this action provides we suggest you look at the \"FOS - Trigger Event(s)\" action which has a similar but more extended behaviour than this plug-in.\u003C\/p\u003E"
    ,"keywords":[
         "clientside"
@@ -32,12 +32,15 @@
            ,"12.2.0.1"
            ,"18.0.0.0"
            ,"19.0.0.0"
+           ,"21.0.0.0"
         ]
        ,"apex":{
             "versions":[
                 "19.2.0"
                ,"20.1.0"
                ,"20.2.0"
+               ,"21.1.0"
+               ,"21.2.0"
             ]
            ,"plugin":{
                 "internalName":"COM.FOS.CLIENTSIDE_CONDITION"
