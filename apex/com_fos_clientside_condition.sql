@@ -181,7 +181,7 @@ wwv_flow_api.create_plugin(
 'This plug-in gives you the ability to specify a client-side condition to control whether the execution of dynamic actions continues or stops. If the condition evaluates to TRUE, then the rest of actions are executed, if the condition evaluates to FAL'
 ||'SE, the execution stops and an optional "ELSE" custom event can be triggered.</p>',
 '<p>If you require more branching logic than what this action provides we suggest you look at the "FOS - Trigger Event(s)" action which has a similar but more extended behaviour than this plug-in.</p>'))
-,p_version_identifier=>'21.2.0'
+,p_version_identifier=>'22.1.0'
 ,p_about_url=>'https://fos.world'
 ,p_plugin_comment=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '@fos-auto-return-to-page',
